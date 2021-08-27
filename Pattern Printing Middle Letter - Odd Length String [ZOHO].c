@@ -42,23 +42,23 @@ GRAMPRO
 #include<string.h>
 int main()
 {
-char a[10000];
-scanf("%s",a);
-int i=0,k=strlen(a)/2,j=strlen(a);
-int s=j-1,t=k,r=0;
+char arr[10000];
+scanf("%s",arr);
+int i=0,mid1=strlen(arr)/2,j=strlen(arr);
+int end=j-1,mid=mid1,r=0;
 for(;i<j;i++){
-    for(int index=i;index<s;index++)
+    for(int index=i;index<end;index++)//to print asterik
         printf("*");
-    for(int p=t;p<=k;p++)
-        printf("%c",a[p]);
-    if(k==j-1){
+    for(int p=mid;p<=mid1;p++)
+        printf("%c",arr[p]);//to print characters after mid1
+    if(mid1==j-1){
         for(int p=0;p<=r-1;p++)
-            printf("%c",a[p]);
-        k=j-2;
-        if(r!=k)
+            printf("%c",arr[p]);//to print characters till mid1
+        mid1=j-2;
+        if(r!=mid1)
             r++;
     }
-    k++;
+    mid1++;
     printf("\n");
     
 }
