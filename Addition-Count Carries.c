@@ -31,8 +31,7 @@ Output:
 
 int main()
 {
-long int x,y;
-int carry=0,count=0;
+int x,y,carry=0,count=0;
 scanf("%ld%ld",&x,&y);
 while(x>0||y>0){
     carry=x%10+y%10+carry;
